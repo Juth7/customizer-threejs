@@ -10,7 +10,9 @@ import AIPicker from "../components/AIPicker";
 import ColorPicker from "../components/ColorPicker";
 import FilePicker from "../components/FilePicker";
 
-import { reader } from "../config/helpers";
+import { download } from "../assets";
+
+import { downloadCanvasToImage, reader } from "../config/helpers";
 
 import state from "../store";
 
@@ -164,6 +166,13 @@ const Customizer = () => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}
+            <button className="download-btn" onClick={downloadCanvasToImage}>
+              <img
+                src={download}
+                alt="download_image"
+                className="w-3/5 h-3/5 object-contain"
+              />
+            </button>
           </motion.div>
         </>
       )}
