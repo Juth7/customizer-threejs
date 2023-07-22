@@ -139,7 +139,6 @@ const Customizer = () => {
                         ? setActiveEditorTab("")
                         : setActiveEditorTab(tab.name)
                     }
-                    handleLeave={() => setActiveEditorTab("")}
                   />
                 ))}
                 {generateTabContent()}
